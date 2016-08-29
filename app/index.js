@@ -5,27 +5,23 @@
 // 	img: 'https://avatars0.githubusercontent.com/u/2078339?v=3&u=e0dd7ffb9703bf2d043295ddf0a27407873c9e27&s=140'
 // }
 
-var React = require('react');
-var ReactDOM = require('react-dom');
-var routes = require('./config/routes');
+// var Raven = require('raven-js');
+// var sentryKey = 'fc121edeb2d04947bcea68f4facfa268';
+// var sentryApp = '94885';
+// var sentryURL = 'https://' + sentryKey +'@app.getsentry.com/' + sentryApp
+// var _APP_INFO = {
+// 	name: 'Github Battle',
+// 	branch: 4,
+// 	version: '1.0'
+// }
 
-var Raven = require('raven-js');
-var sentryKey = 'fc121edeb2d04947bcea68f4facfa268';
-var sentryApp = '94885';
-var sentryURL = 'https://' + sentryKey +'@app.getsentry.com/' + sentryApp
-var _APP_INFO = {
-	name: 'Github Battle',
-	branch: 4,
-	version: '1.0'
-}
-
-Raven.config(sentryURL, {
-	release: _APP_INFO.version,
-	tags: {
-		name: _APP_INFO.name,
-		branch: _APP_INFO.branch
-	}
-	}).install();
+// Raven.config(sentryURL, {
+// 	release: _APP_INFO.version,
+// 	tags: {
+// 		name: _APP_INFO.name,
+// 		branch: _APP_INFO.branch
+// 	}
+// 	}).install();
 
 
 // var ProfilePic = React.createClass({
@@ -85,6 +81,8 @@ Raven.config(sentryURL, {
 // 	document.getElementById('app')
 // );
 
-
+var React = require('react');
+var ReactDOM = require('react-dom');
+var routes = require('./config/routes');
 
 ReactDOM.render(routes, document.getElementById('app'));

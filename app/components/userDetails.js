@@ -2,7 +2,6 @@ var React = require('react');
 var PropTypes = React.PropTypes
 
 function UserDetails (user) {
-  console.log(user);
   return (
     <div>
       {!!user.score && <li className="list-group-item"><h3>Score: {user.score}</h3></li>}
